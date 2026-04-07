@@ -1,126 +1,126 @@
 # CLAUDE.md
 
-This file provides guidance for AI assistants (Claude Code and similar) working in this repository.
+Este arquivo fornece orientações para assistentes de IA (Claude Code e similares) que trabalham neste repositório.
 
-## Repository Overview
+## Visão Geral do Repositório
 
-**Repository:** visionx-ia/teste-claude-1
-**Status:** Newly initialized — no source code has been committed yet.
+**Repositório:** visionx-ia/teste-claude-1
+**Status:** Recém-inicializado — nenhum código-fonte foi commitado ainda.
 
-This repository was created with an empty state. As the project evolves, update this file to reflect the actual codebase structure, conventions, and workflows.
-
----
-
-## Current State
-
-- No source language or framework has been established.
-- No dependency files (package.json, requirements.txt, etc.) exist.
-- No CI/CD pipelines are configured.
-- No tests, linters, or build scripts are in place.
-
-When code is first added, update the sections below accordingly.
+Este repositório foi criado em estado vazio. À medida que o projeto evoluir, atualize este arquivo para refletir a estrutura real do código, convenções e fluxos de trabalho.
 
 ---
 
-## Git Conventions
+## Estado Atual
 
-### Branch Naming
-- Feature branches: `feature/<short-description>`
-- Bug fixes: `fix/<short-description>`
-- Documentation: `docs/<short-description>`
-- AI-assisted work: `claude/<task-description>` (e.g., `claude/add-claude-documentation-v7kul`)
+- Nenhuma linguagem ou framework foi definido.
+- Nenhum arquivo de dependências existe (package.json, requirements.txt, etc.).
+- Nenhuma pipeline de CI/CD está configurada.
+- Nenhum teste, linter ou script de build está em vigor.
 
-### Commit Messages
-Write commit messages in the imperative mood, focused on *why* not *what*:
+Quando o primeiro código for adicionado, atualize as seções abaixo de acordo.
+
+---
+
+## Convenções Git
+
+### Nomenclatura de Branches
+- Funcionalidades: `feature/<descrição-curta>`
+- Correções de bugs: `fix/<descrição-curta>`
+- Documentação: `docs/<descrição-curta>`
+- Trabalho assistido por IA: `claude/<descrição-da-tarefa>` (ex.: `claude/add-claude-documentation-v7kul`)
+
+### Mensagens de Commit
+Escreva mensagens de commit no modo imperativo, focando no *porquê* e não no *o quê*:
 
 ```
-Add user authentication module
+Adiciona módulo de autenticação de usuários
 
-Implement JWT-based auth to support stateless API sessions.
-Replaces the prior session-cookie approach for better scalability.
+Implementa autenticação baseada em JWT para suportar sessões de API sem estado.
+Substitui a abordagem anterior com cookie de sessão para melhor escalabilidade.
 ```
 
-- Keep the subject line under 72 characters.
-- Leave a blank line between subject and body.
-- Reference issue numbers where applicable: `Closes #42`
+- Mantenha a linha de assunto com no máximo 72 caracteres.
+- Deixe uma linha em branco entre o assunto e o corpo.
+- Referencie números de issues quando aplicável: `Closes #42`
 
-### Push Workflow
+### Fluxo de Push
 ```bash
-git push -u origin <branch-name>
+git push -u origin <nome-do-branch>
 ```
 
-Retry up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network failures.
+Tente novamente até 4 vezes com backoff exponencial (2s, 4s, 8s, 16s) em caso de falhas de rede.
 
 ---
 
-## Development Workflow (to be updated as project grows)
+## Fluxo de Desenvolvimento (atualizar conforme o projeto cresce)
 
-### Bootstrapping a New Project
-When this repo gains a stack, document the setup steps here. Example template:
+### Configuração Inicial de um Novo Projeto
+Quando este repositório receber uma stack, documente os passos de configuração aqui. Exemplo de template:
 
 ```bash
-# Install dependencies
-<install command>
+# Instalar dependências
+<comando de instalação>
 
-# Run development server
-<dev command>
+# Executar servidor de desenvolvimento
+<comando dev>
 
-# Run tests
-<test command>
+# Executar testes
+<comando de testes>
 
-# Lint and format
-<lint command>
+# Lint e formatação
+<comando de lint>
 ```
 
-### Environment Variables
-- Copy `.env.example` to `.env` before running locally (create `.env.example` when secrets are needed).
-- Never commit `.env` or secrets.
+### Variáveis de Ambiente
+- Copie `.env.example` para `.env` antes de executar localmente (crie `.env.example` quando houver segredos).
+- Nunca faça commit de `.env` ou segredos.
 
 ---
 
-## Code Style Conventions
+## Convenções de Código
 
-These should be updated once a language/framework is chosen:
+Estas devem ser atualizadas quando uma linguagem/framework for escolhido:
 
-- Follow the formatter/linter enforced by the project toolchain (e.g., Prettier, Black, rustfmt, gofmt).
-- Prefer explicit over implicit.
-- Keep functions small and single-purpose.
-- Write tests alongside new features — do not add features without coverage.
-- Avoid speculative abstractions; build only what the current task requires.
-
----
-
-## AI Assistant Guidelines
-
-### What to do
-- Read existing files before modifying them.
-- Match the style and patterns already present in the codebase.
-- Prefer editing existing files over creating new ones.
-- Keep changes scoped to what was asked — no drive-by refactors.
-- Mark tasks complete in TodoWrite as each one is finished.
-
-### What to avoid
-- Do not add error handling for impossible scenarios.
-- Do not add docstrings or comments to unchanged code.
-- Do not introduce backwards-compatibility shims for code that doesn't need them.
-- Do not commit or push without explicit instruction from the user.
-- Do not create new files unless strictly necessary.
-- Do not add emoji to files unless explicitly requested.
-
-### Risky actions requiring confirmation
-Always pause and confirm before:
-- Deleting files or branches
-- Force-pushing
-- Modifying CI/CD pipelines
-- Posting to external services or GitHub (PRs, comments, issues)
-- Any operation that is hard to reverse
+- Siga o formatter/linter aplicado pelo projeto (ex.: Prettier, Black, rustfmt, gofmt).
+- Prefira explícito ao implícito.
+- Mantenha funções pequenas e com propósito único.
+- Escreva testes junto com novas funcionalidades — não adicione features sem cobertura.
+- Evite abstrações especulativas; construa apenas o que a tarefa atual exige.
 
 ---
 
-## Repository Contacts
+## Diretrizes para Assistentes de IA
 
-Update this section with team or maintainer information as the project grows.
+### O que fazer
+- Leia os arquivos existentes antes de modificá-los.
+- Siga o estilo e os padrões já presentes no código.
+- Prefira editar arquivos existentes a criar novos.
+- Mantenha as mudanças restritas ao que foi solicitado — sem refatorações por impulso.
+- Marque as tarefas como concluídas no TodoWrite assim que cada uma for finalizada.
+
+### O que evitar
+- Não adicione tratamento de erros para cenários impossíveis.
+- Não adicione docstrings ou comentários em código não modificado.
+- Não introduza shims de compatibilidade retroativa para código que não precisa deles.
+- Não faça commit ou push sem instrução explícita do usuário.
+- Não crie novos arquivos a menos que seja estritamente necessário.
+- Não adicione emojis em arquivos a menos que seja explicitamente solicitado.
+
+### Ações arriscadas que requerem confirmação
+Sempre pause e confirme antes de:
+- Deletar arquivos ou branches
+- Fazer force-push
+- Modificar pipelines de CI/CD
+- Postar em serviços externos ou GitHub (PRs, comentários, issues)
+- Qualquer operação difícil de reverter
 
 ---
 
-*Last updated: 2026-04-07 — Repository is in initial empty state. Update this file as the project evolves.*
+## Contatos do Repositório
+
+Atualize esta seção com informações da equipe ou mantenedores à medida que o projeto crescer.
+
+---
+
+*Última atualização: 07/04/2026 — Repositório em estado inicial vazio. Atualize este arquivo conforme o projeto evoluir.*
