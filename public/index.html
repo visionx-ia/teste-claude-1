@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#6366f1" />
+  <title>To-do</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Minhas Tarefas</h1>
+      <div class="stats" id="stats">
+        <span id="stat-active">0 ativas</span>
+        <span class="dot">·</span>
+        <span id="stat-completed">0 concluídas</span>
+      </div>
+    </header>
+
+    <div class="input-area">
+      <div class="input-row">
+        <input
+          id="new-todo"
+          type="text"
+          placeholder="Nova tarefa..."
+          maxlength="120"
+          autocomplete="off"
+        />
+        <div class="priority-select" id="priority-select" title="Prioridade">
+          <span class="priority-dot normal" id="priority-dot"></span>
+        </div>
+        <button id="add-btn" aria-label="Adicionar">+</button>
+      </div>
+      <div class="priority-menu hidden" id="priority-menu">
+        <button class="p-opt" data-p="low">🟢 Baixa</button>
+        <button class="p-opt" data-p="normal">🔵 Normal</button>
+        <button class="p-opt" data-p="high">🔴 Alta</button>
+      </div>
+    </div>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">Todas</button>
+      <button class="filter" data-filter="active">Ativas</button>
+      <button class="filter" data-filter="completed">Concluídas</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <div class="footer hidden" id="footer">
+      <button id="clear-completed">Limpar concluídas</button>
+    </div>
+  </div>
+
+  <div class="toast hidden" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
